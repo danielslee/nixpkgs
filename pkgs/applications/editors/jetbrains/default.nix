@@ -149,7 +149,7 @@ rec {
       # fortify source breaks build since delve compiles with -O0
       ''--prefix CGO_CPPFLAGS " " "-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0"''
     ];
-    extraBuildInputs = [ libgcc ];
+    extraBuildInputs = [ libgcc stdenv.cc.cc ];
   }).overrideAttrs
     (attrs: {
       postFixup = (attrs.postFixup or "") + lib.optionalString stdenv.isLinux ''
