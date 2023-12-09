@@ -215,6 +215,7 @@ rec {
       python3
       openssl
       libxcrypt-legacy
+      fontconfig
     ] ++ lib.optionals (stdenv.isLinux && stdenv.isAarch64) [
       expat
       libxml2
