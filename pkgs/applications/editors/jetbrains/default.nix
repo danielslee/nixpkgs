@@ -21,6 +21,8 @@
 , libgcc
 , lttng-ust_2_12
 , xz
+, xorg
+, libGL
 
 , vmopts ? null
 }:
@@ -216,6 +218,8 @@ rec {
       openssl
       libxcrypt-legacy
       fontconfig
+      xorg.libX11
+      libGL
     ] ++ lib.optionals (stdenv.isLinux && stdenv.isAarch64) [
       expat
       libxml2
