@@ -111,6 +111,8 @@ rec {
       lttng-ust_2_12
       musl
       libgcc
+      lttng-ust_2_12
+      fontconfig
     ] ++ lib.optionals (stdenv.isLinux && stdenv.isAarch64) [
       expat
       libxml2
