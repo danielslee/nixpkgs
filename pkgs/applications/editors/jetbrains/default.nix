@@ -110,6 +110,7 @@ rec {
       libxcrypt-legacy
       lttng-ust_2_12
       musl
+      libgcc
     ] ++ lib.optionals (stdenv.isLinux && stdenv.isAarch64) [
       expat
       libxml2
